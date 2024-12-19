@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Gps</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+        <!-- Bouton de déconnexion -->
+        <button class="btn btn-danger ms-3">Déconnexion</button>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="map" style="height: 500px;"></div>
+
+
+
+  <div class="mt-5">
+    <h2>Liste des Utilisateurs</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
